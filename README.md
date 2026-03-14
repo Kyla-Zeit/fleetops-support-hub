@@ -1,38 +1,54 @@
 # FleetOps Support Hub
 
-This project simulates a small internal operations platform for a custom software company that supports fleet-tracking clients, manages escalated issues, and tracks release items scheduled for deployment.
+FleetOps Support Hub is a portfolio-ready **C# ASP.NET Core Web API** built in **VS Code** to demonstrate backend development skills relevant to full-stack .NET roles.
+
+The application simulates an internal operations platform for a custom software company that manages **client accounts**, **escalated support tickets**, and **scheduled software releases**. It is designed to reflect real business workflows rather than a toy project.
+
+## Why this project
+
+This project demonstrates:
 
 - ASP.NET Core Web API development
-- Relational data modeling with **Entity Framework Core + SQLite**
-- CRUD endpoints with filtering and status workflows
-- Support/escalation domain logic
-- Release management concepts
-- Swagger documentation
-- GitHub-friendly repo structure
+- Relational data modeling with **Entity Framework Core** and **SQLite**
+- CRUD operations with filtering and status-based workflows
+- RESTful endpoint design
+- Support and escalation tracking logic
+- Release management workflows
+- Swagger / OpenAPI documentation
+- Clean GitHub-ready project structure
 - Development in **VS Code**
 
-## Tech stack
+## Tech Stack
 
 - C#
 - .NET 8
-- ASP.NET Core
+- ASP.NET Core Web API
 - Entity Framework Core
 - SQLite
 - Swagger / OpenAPI
 - VS Code
 
-## Domain model
+## Core Entities
 
 ### ClientAccount
-Represents a client using the software platform.
+Represents a client organization using the software platform.
 
 ### SupportTicket
-Represents escalated support issues, investigation work, and ticket status.
+Represents escalated issues, investigation work, and ticket status tracking.
 
 ### ReleaseItem
-Represents scheduled releases, linked to tickets where applicable.
+Represents scheduled software releases, optionally linked to support tickets.
 
-## API routes
+## Features
+
+- Manage client accounts
+- Create and update support tickets
+- Track ticket priority and status
+- Schedule and complete release items
+- Filter data through API query parameters
+- Test endpoints through Swagger UI
+
+## API Routes
 
 ### Clients
 - `GET /api/clients`
@@ -59,61 +75,19 @@ Represents scheduled releases, linked to tickets where applicable.
 - `PATCH /api/releases/{id}/complete`
 - `DELETE /api/releases/{id}`
 
-## Getting started in VS Code
+## Run Locally
 
-### 1. Create the project folder locally
-Unzip this project and open the folder in VS Code.
-
-### 2. Install prerequisites
+### Requirements
 - .NET 8 SDK
-- VS Code
-- C# extension (recommended automatically)
+- VS Code or Visual Studio
 
-### 3. Restore packages
+### Steps
 ```bash
+git clone https://github.com/Kyla-Zeit/fleetops-support-hub.git
+cd fleetops-support-hub
 dotnet restore
-```
-
-### 4. Run the API
-```bash
 dotnet run
-```
 
-### 5. Open Swagger
-Open the local URL shown in the terminal, then go to `/swagger` if it does not open automatically.
+Then open Swagger UI in your browser at:
 
-## Sample JSON for testing
-
-### Create a client
-```json
-{
-  "name": "CityFleet Dispatch",
-  "primaryContact": "Jordan Smith",
-  "email": "jordan@cityfleet.example",
-  "isActive": true
-}
-```
-
-### Create a ticket
-```json
-{
-  "title": "Geo-fence alerts delayed by 90 seconds",
-  "description": "Alert events arrive late during high-volume route updates.",
-  "status": "Escalated",
-  "priority": "High",
-  "assignedTo": "Rebecca Maguire",
-  "clientAccountId": 1
-}
-```
-
-### Create a release
-```json
-{
-  "version": "2026.3.2",
-  "summary": "Fix for delayed geo-fence processing and queue optimization.",
-  "scheduledUtc": "2026-03-15T21:00:00Z",
-  "sundayNightRelease": true,
-  "status": "Scheduled",
-  "supportTicketId": 1
-}
-```
+http://localhost:5184/swagger
