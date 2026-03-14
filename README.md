@@ -1,18 +1,12 @@
 # FleetOps Support Hub
 
-A portfolio-ready **C# ASP.NET Core Web API** built in **VS Code** to showcase skills relevant to full-stack .NET roles.
-
 This project simulates a small internal operations platform for a custom software company that supports fleet-tracking clients, manages escalated issues, and tracks release items scheduled for deployment.
-
-## Why this project works for a portfolio
-
-It demonstrates:
 
 - ASP.NET Core Web API development
 - Relational data modeling with **Entity Framework Core + SQLite**
 - CRUD endpoints with filtering and status workflows
 - Support/escalation domain logic
-- Release management concepts, including **Sunday-night release tracking**
+- Release management concepts
 - Swagger documentation
 - GitHub-friendly repo structure
 - Development in **VS Code**
@@ -123,20 +117,3 @@ Open the local URL shown in the terminal, then go to `/swagger` if it does not o
   "supportTicketId": 1
 }
 ```
-
-## Good GitHub repo title ideas
-
-- `fleetops-support-hub`
-- `dotnet-support-release-api`
-- `aspnetcore-client-ticket-tracker`
-
-## Good resume bullet for this project
-
-Built a C# ASP.NET Core Web API in VS Code for client account, support ticket, and release management, using Entity Framework Core with SQLite, Swagger-documented REST endpoints, relational modeling, and status-based workflow operations.
-
-## Good talking points in an interview
-
-- Why you chose a business operations domain instead of a toy app
-- How the schema reflects real client-support-release relationships
-- Why SQLite was used for local portability, with SQL Server as an easy next step
-- How the project could be extended with authentication, Azure deployment, and a frontend dashboard
