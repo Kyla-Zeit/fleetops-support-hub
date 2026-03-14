@@ -4,10 +4,6 @@ FleetOps Support Hub is a portfolio-ready **C# ASP.NET Core Web API** built in *
 
 The application simulates an internal operations platform for a custom software company that manages **client accounts**, **escalated support tickets**, and **scheduled software releases**. It is designed to reflect real business workflows rather than a toy project.
 
-## Why this project
-
-This project demonstrates:
-
 - ASP.NET Core Web API development
 - Relational data modeling with **Entity Framework Core** and **SQLite**
 - CRUD operations with filtering and status-based workflows
