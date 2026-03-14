@@ -83,6 +83,7 @@ git clone https://github.com/Kyla-Zeit/fleetops-support-hub.git
 cd fleetops-support-hub
 dotnet restore
 dotnet run
+```
 
 Then open Swagger UI in your browser at:
 
